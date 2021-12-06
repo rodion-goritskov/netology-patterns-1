@@ -1,0 +1,1 @@
+[![Appveyor build status](https://ci.appveyor.com/api/projects/status/q8b8y717ho56589u/branch/main?svg=true)](https://ci.appveyor.com/project/rodion-goritskov/netology-patterns-1/branch/main)

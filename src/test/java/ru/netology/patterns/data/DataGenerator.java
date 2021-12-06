@@ -1,7 +1,6 @@
 package ru.netology.patterns.data;
 
 import com.github.javafaker.Faker;
-import io.qameta.allure.Step;
 
 import java.util.Locale;
 

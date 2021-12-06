@@ -1,8 +1,5 @@
 package ru.netology.patterns;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.Description;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.netology.patterns.data.DataGenerator;
@@ -19,13 +16,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 public class MeetingFormTest {
-    @BeforeAll
-    public static void configureSelenideAllure() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
-
     @Test
-    @Description("Schedule meeting, then reschedule it to another day")
     public void rescheduleMeetingIfAlreadyScheduled() {
         FormData initialData = DataGenerator
                 .generateDefaultFormData()

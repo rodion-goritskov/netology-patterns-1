@@ -32,7 +32,7 @@ public class MeetingFormTest {
                 .date(LocalDate.now().plusWeeks(1L))
                 .build();
 
-        FormPage formPage = open("http://localhost:9999", FormPage.class)
+        FormPage formPage = open("/", FormPage.class)
                 .fillForm(initialData)
                 .toggleAgreement()
                 .submit();

@@ -12,5 +12,4 @@ install:
   - java -jar ./artifacts/app-card-delivery.jar &
 
 build_script:
-  - ./mvnw -version
-  - ./mvnw clean test -Dselenide.headless=true
+  - ./mvnw clean test -Dselenide.headless=true -Dselenide.baseUrl=http://localhost:9999

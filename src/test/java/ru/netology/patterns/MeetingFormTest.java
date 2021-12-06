@@ -1,6 +1,5 @@
 package ru.netology.patterns;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.netology.patterns.data.DataGenerator;
 import ru.netology.patterns.data.FormData;
@@ -38,10 +37,9 @@ public class MeetingFormTest {
                         .contains("Успешно!")
         );
 
-
-        FormData updatedMeetingDate = FormData.builder().date(LocalDate.now().plusWeeks(3)).build();
+        FormData updatedMeetingDateForm = FormData.builder().date(LocalDate.now().plusWeeks(3)).build();
         formPage
-                .fillForm(updatedMeetingDate)
+                .fillForm(updatedMeetingDateForm)
                 .submit();
 
         ReplanNotification replanNotification = formPage.replanNotification();
@@ -57,7 +55,7 @@ public class MeetingFormTest {
         assertAll(
                 () -> assertThat(successNotification.getText())
                         .contains("Встреча успешно запланирована на")
-                        .contains(DateTimeFormatter.ofPattern("dd.MM.yyyy").format(updatedMeetingDate.getDate())),
+                        .contains(DateTimeFormatter.ofPattern("dd.MM.yyyy").format(updatedMeetingDateForm.getDate())),
                 () -> assertThat(successNotification.getTitle())
                         .contains("Успешно!")
         );

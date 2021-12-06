@@ -1,6 +1,5 @@
 package ru.netology.patterns.pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
 import ru.netology.patterns.data.FormData;
